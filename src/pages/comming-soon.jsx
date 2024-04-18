@@ -26,7 +26,7 @@ const ComingSoon = () => {
   useEffect(() => {
     // Set the target deadline in local storage
     const setTargetDeadline = () => {
-      const deadline = new Date("2024-05-10T12:00:00"); // April 10th at 12:00 PM
+      const deadline = new Date("2024-05-10T12:00:00"); // May 10th at 12:00 PM
       localStorage.setItem("endingTime", deadline.getTime().toString());
 
       const birdsAudioElement = document.getElementById("birdsAudio");
