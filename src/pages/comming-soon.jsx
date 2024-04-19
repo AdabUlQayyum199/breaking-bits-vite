@@ -12,6 +12,7 @@ import WindOge from "../assets/images/Windoge98.png";
 import Twittercon from "../assets/images/twitter.svg";
 import TelegramIcon from "../assets/images/Telegram.svg";
 import DiscordIcon from "../assets/images/discord.svg";
+import WebsiteLogo from "../assets/images/WebsiteLogo.png";
 
 const ComingSoon = () => {
   const [remainingTime, setRemainingTime] = useState({
@@ -21,7 +22,7 @@ const ComingSoon = () => {
   });
 
   // State to track if audio autoplay is prevented
-  const [autoplayPrevented, setAutoplayPrevented] = useState(false);
+  const [autoplayPrevented, setAutoplayPrevented] = useState(true);
 
   useEffect(() => {
     // Set the target deadline in local storage
@@ -99,42 +100,66 @@ const ComingSoon = () => {
   return (
     <div className="coming_soon">
       {/* <img className="desktop_bg coming_soon_bg" src={desktop} alt="Clown image" /> */}
-      <img className="mobile_bg coming_soon_bg" src={mobile} alt="Clown image" />      
-      <img className="desktop_bg coming_soon_bg" src={desktop} useMap="#image-map" />
+      <img
+        className="mobile_bg coming_soon_bg"
+        src={mobile}
+        alt="Clown image"
+      />
+      <img
+        className="desktop_bg coming_soon_bg"
+        src={desktop}
+        useMap="#image-map"
+      />
       {/* <div className="alias_container">
         
       </div> */}
-      <a className="alias alias1" href="https://www.clownicp.org/"><img src={Clown} alt="Clown image" /></a>
-      <a className="alias alias2" href="https://info.icpswap.com/"> <img src={InternetICP} alt="Clown image" /></a>
-      <a className="alias alias3" href="https://oc.app/"><img src={OpenChat} alt="Clown image" /></a>
-      <a className="alias alias4" href="https://info.icpswap.com/"><img src={IcpSwap} alt="Clown image" /></a>
-      <a className="alias alias5" href="https://windoge98.com/"><img src={WindOge} alt="Clown image" /></a>
+      <h2 className="our_allies_heading">Our Allies</h2>
+      <a className="alias alias1" href="https://www.clownicp.org/">
+        <img src={Clown} alt="Clown image" />
+      </a>
+      <a className="alias alias2" href="https://info.icpswap.com/">
+        {" "}
+        <img src={InternetICP} alt="Clown image" />
+      </a>
+      <a className="alias alias3" href="https://oc.app/">
+        <img src={OpenChat} alt="Clown image" />
+      </a>
+      <a className="alias alias4" href="https://info.icpswap.com/">
+        <img src={IcpSwap} alt="Clown image" />
+      </a>
+      <a className="alias alias5" href="https://windoge98.com/">
+        <img src={WindOge} alt="Clown image" />
+      </a>
 
-      {/* Scoial Icons */}
-      <div className="social_icons">
-        <a
-          href="https://t.me/Breaking_Bits"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {" "}
-          <img src={TelegramIcon} alt="Telegram Icon" />
-        </a>
-        <a
-          href="https://x.com/Breaking_Bits"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={Twittercon} alt="Twitter Icon" />
-        </a>
-        <a
-          href="https://discord.gg/Pv2R2xS2FS"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={DiscordIcon} alt="Discord Icon" />
-        </a>
-      </div>
+      <header>
+        <img src={WebsiteLogo} alt="Site Logo" />
+        {/* Scoial Icons */}
+        <div className="social_icons">
+          <a
+            href="https://t.me/Breaking_Bits"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            <img src={TelegramIcon} alt="Telegram Icon" />
+          </a>
+          <a
+            href="https://x.com/Breaking_Bits"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Twittercon} alt="Twitter Icon" />
+          </a>
+          <a
+            href="https://discord.gg/Pv2R2xS2FS"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={DiscordIcon} alt="Discord Icon" />
+          </a>
+        </div>
+      </header>
+
       {/* audio_links */}
       <div className="audio_links">
         <audio
@@ -173,11 +198,22 @@ const ComingSoon = () => {
         )}
       </div>
       <div className="partner_logos">
-        <a href="https://www.clownicp.org/"><img src={Clown} alt="Clown image" /></a>
-        <a href="https://info.icpswap.com/"> <img src={InternetICP} alt="Clown image" /></a>
-        <a href="https://oc.app/"><img src={OpenChat} alt="Clown image" /></a>
-        <a href="https://info.icpswap.com/"><img src={IcpSwap} alt="Clown image" /></a>
-        <a href="https://windoge98.com/"><img src={WindOge} alt="Clown image" /></a>
+        <a href="https://www.clownicp.org/">
+          <img src={Clown} alt="Clown image" />
+        </a>
+        <a href="https://info.icpswap.com/">
+          {" "}
+          <img src={InternetICP} alt="Clown image" />
+        </a>
+        <a href="https://oc.app/">
+          <img src={OpenChat} alt="Clown image" />
+        </a>
+        <a href="https://info.icpswap.com/">
+          <img src={IcpSwap} alt="Clown image" />
+        </a>
+        <a href="https://windoge98.com/">
+          <img src={WindOge} alt="Clown image" />
+        </a>
       </div>
     </div>
   );
