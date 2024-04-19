@@ -20,6 +20,7 @@ code {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .coming_soon_bg {
@@ -31,17 +32,35 @@ code {
   object-fit: cover;
 }
 
-.alias {
+.alias_container {
+  display: grid;
+  right: clamp(-10rem, 35.512vw + -27.512rem, 8rem);
+  top: 53.5%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+      "top top top"
+      "one two three";
   position: absolute;
-  right: 1%;
-  display: none;
+  gap: 0 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(3deg);
+  scale: 0.9;
+}
+
+.top { grid-area: top; align-self: end; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+
+.alias {
+  display: inline-block;
 }
 
 .alias1 {
-  display: inline-block;
-  width: 50px;
-  right: 15.5%;
-  top: 57%;
+  width: 46px;
   rotate: 10deg;
 }
 
@@ -50,74 +69,59 @@ code {
 }
 
 .alias3 {
-  display: inline-block;
-  width: 45px;
-  right: 7.5%;
-  top: 58.5%;
+  width: 50px;
 }
 
 .alias4 {
-  display: inline-block;
-  right: 7%;
-  top: 53%;
   width: 90px;
 }
 
 .alias5 {
-  display: inline-block;
   width: 50px;
-  right: 11.5%;
-  top: 58%;
-  rotate: 10deg;
 }
-.our_allies_heading {
-  display: inline-block;
-  right: 12.3%;
-  top: 51%;
-  rotate: 1deg;
-  position: absolute;
-  color: #fff;
-  font-size: 22px;
+
+
+
+
+
+@media screen and (max-width: 1650px) {
+
+  .alias_container {
+    /* right: 80px; */
+    top: 52%;
+    scale: 0.8;
+  }
+
 }
+
+@media screen and (max-width: 1450px) {
+
+  .alias_container {
+    /* right: 50px; */
+  }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+  .alias_container {
+    /* right: -150px; */
+  }
+
+}
+
 @media screen and (max-width: 789px) {
-  .alias {
+
+  .alias_container {
+    bottom: 2.5rem;
+    right: -0.5rem;
+    max-height: max-content;
+    scale: 0.55;
     position: absolute;
-    right: 1%;
-    display: none;
+    top: revert;
+    rotate: 11deg;
   }
 
-  .alias1 {
-    display: inline-block;
-    width: 50px;
-    right: 15.5%;
-    top: 57%;
-    rotate: 15deg;
-  }
-
-  .alias2 {
-    width: 50px;
-  }
-
-  .alias3 {
-    display: inline-block;
-    width: 45px;
-    right: 7.5%;
-    top: 59%;
-  }
-
-  .alias4 {
-    display: inline-block;
-    right: 9.5%;
-    top: 53%;
-    width: 90px;
-  }
-
-  .alias5 {
-    display: inline-block;
-    width: 50px;
-    right: 11.5%;
-    top: 58%;
-  }
 }
 
 .alias img {
@@ -321,52 +325,6 @@ header {
     width: 100px;
     height: 100px;
   }
-
-  .alias {
-    position: absolute;
-    right: 1%;
-    display: none;
-  }
-
-  .alias1 {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    right: 18.5%;
-    top: 82%;
-    rotate: 20deg;
-  }
-
-  .alias2 {
-    width: 50px;
-  }
-
-  .alias3 {
-    transform: rotate(15deg);
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    /*right: 5%;*/
-    top: 85%;
-  }
-
-  .alias4 {
-    transform: rotate(10deg);
-    display: inline-block;
-    right: 5%;
-    top: 78%;
-    width: 60px;
-    height: 60px;
-  }
-
-  .alias5 {
-    transform: rotate(20deg);
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    right: 9%;
-    top: 83%;
-  }
 }
 @media only screen and (max-width: 500px) {
   .partner_logos img {
@@ -377,30 +335,4 @@ header {
     gap: 0rem;
   }
 }
-@media only screen and (min-width: 790px) and (max-width: 1400px) {
-  .alias {
-    position: absolute;
-    right: 1%;
-    display: none;
-  }
 
-  .alias1 {
-    display: none;
-  }
-
-  .alias2 {
-    display: none;
-  }
-
-  .alias3 {
-    display: none;
-  }
-
-  .alias4 {
-    display: none;
-  }
-
-  .alias5 {
-    display: none;
-  }
-}

@@ -110,26 +110,22 @@ const ComingSoon = () => {
         src={desktop}
         useMap="#image-map"
       />
-      {/* <div className="alias_container">
+      <div className="alias_container">
         
-      </div> */}
-      <h2 className="our_allies_heading">Our Allies</h2>
-      <a className="alias alias1" href="https://www.clownicp.org/">
+      
+      <a className="alias alias1 one" href="https://www.clownicp.org/">
         <img src={Clown} alt="Clown image" />
       </a>
-      <a className="alias alias2" href="https://info.icpswap.com/">
-        {" "}
-        <img src={InternetICP} alt="Clown image" />
-      </a>
-      <a className="alias alias3" href="https://oc.app/">
+      <a className="alias alias3 three" href="https://oc.app/">
         <img src={OpenChat} alt="Clown image" />
       </a>
-      <a className="alias alias4" href="https://info.icpswap.com/">
+      <a className="alias alias4 top" href="https://info.icpswap.com/">
         <img src={IcpSwap} alt="Clown image" />
       </a>
-      <a className="alias alias5" href="https://windoge98.com/">
+      <a className="alias alias5 two" href="https://windoge98.com/">
         <img src={WindOge} alt="Clown image" />
       </a>
+      </div>
 
       <header>
         <img src={WebsiteLogo} alt="Site Logo" />
