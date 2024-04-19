@@ -281,7 +281,22 @@ code {
 }
 @media only screen and (max-width: 768px) {
   #hours {
-    top: 0px;
+    font-size: 60px;
+    position: relative;
+    top: -10px;
+    left: -1%;
+  }
+  #minutes {
+    position: relative;
+    left: -3%;
+    font-size: 55px;
+    top: -7px;
+  }
+  #seconds {
+    position: relative;
+    top: 5%;
+    font-size: 50px;
+    left: -3%;
   }
   .partner_logos {
     gap: 1rem;
