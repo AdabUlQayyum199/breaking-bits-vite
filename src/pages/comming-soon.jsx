@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // importing assests
-import BirdsAudio from "../assets/Audio/mixkit-birds-in-the-spring-forest.wav";
+import BirdsAudio from "../assets/Audio/crickets-at-night-in-nature.wav";
 import ClockAudio from "../assets/Audio/clock-tick-tock-sound.mp3";
 import Clown from "../assets/images/Clown.png";
 import desktop from "../assets/images/Clock_Timer_Desktop.png";

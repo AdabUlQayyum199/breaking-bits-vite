@@ -138,7 +138,7 @@ code {
   position: relative;
   left: -3%;
   font-size: 65px;
-  top: -7px;
+  top: -6px;
 }
 #seconds {
   position: relative;
@@ -245,15 +245,19 @@ header {
 
 @media only screen and (max-width: 1600px) {
   #hours {
-    /* font-size: 90px; */
+    font-size: 62px;
+    top: 11%;
+    left: 1%;
   }
   #minutes {
-    /* font-size: 85px; */
-    left: 5px;
+    top: 5px;
+    font-size: 58px;
+    left: -8px;
   }
   #seconds {
-    /* font-size: 75px; */
-    right: 5px;
+    font-size: 55px;
+    top: 10px;
+    left: -4%;
   }
 }
 @media only screen and (max-width: 1500px) {
@@ -263,6 +267,16 @@ header {
   #hours {
     position: relative;
     right: -10px;
+  }
+  .our_allies_heading {
+    margin: 0;
+    top: 53%;
+    font-size: 19px;
+    right: 12.3%;
+  }
+  .alias4 {
+    right: 6.5%;
+    width: 84px;
   }
 }
 @media only screen and (max-width: 1440px) {
