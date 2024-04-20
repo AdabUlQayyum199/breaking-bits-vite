@@ -110,6 +110,7 @@ const ComingSoon = () => {
         src={desktop}
         useMap="#image-map"
       />
+      
       <div className="alias_container">
         
       

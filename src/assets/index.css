@@ -34,8 +34,6 @@ code {
 
 .alias_container {
   display: grid;
-  right: clamp(-10rem, 35.512vw + -27.512rem, 8rem);
-  top: 53.5%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-template-areas:
@@ -80,41 +78,9 @@ code {
   width: 50px;
 }
 
-
-
-
-
-@media screen and (max-width: 1650px) {
-
-  .alias_container {
-    /* right: 80px; */
-    top: 52%;
-    scale: 0.8;
-  }
-
-}
-
-@media screen and (max-width: 1450px) {
-
-  .alias_container {
-    /* right: 50px; */
-  }
-
-}
-
-@media screen and (max-width: 1300px) {
-
-  .alias_container {
-    /* right: -150px; */
-  }
-
-}
-
 @media screen and (max-width: 789px) {
 
   .alias_container {
-    bottom: 2.5rem;
-    right: -0.5rem;
     max-height: max-content;
     scale: 0.55;
     position: absolute;
@@ -231,18 +197,26 @@ code {
 header {
   position: absolute;
   top: 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  justify-content: space-between;
+  align-items: space-between;
   width: 95%;
 }
-.social_icons img {
-  width: 50px;
-  height: 50px;
+
+header > img {
+  width: clamp(6.25rem, 8.666vw + 1.977rem, 9.375rem);
 }
+
+.social_icons img {
+  width: clamp(2rem, 3.12vw + 0.462rem, 3.125rem);
+  height: clamp(2rem, 3.12vw + 0.462rem, 3.125rem);
+}
+
 .social_icons {
   display: flex;
   gap: 1.5rem;
+  justify-content: end;
 }
 
 /* Media Queries ------------------------------------------------ */
@@ -334,5 +308,39 @@ header {
   .partner_logos {
     gap: 0rem;
   }
+}
+
+/* queries */
+
+.alias_container {
+  bottom: 8%;
+  right: -3rem;
+  scale: 0.6;
+}
+
+@media screen and (min-width: 540px) {
+  .alias_container {
+    bottom: 11%;
+    right: 2rem;
+  }
+}
+
+@media screen and (min-width: 789px) {
+  .alias_container {
+    bottom: initial;
+    right: clamp(-4rem, 35vw + -32rem, 10rem);
+    top: 53%;
+    scale: 0.8;
+  }
+}
+
+@media screen and (min-width: 790px) and (max-width: 1280px){
+  .alias_container {
+    display: none;
+  }
+}
+
+.mobile_bg {
+  object-position: bottom center;
 }
 
