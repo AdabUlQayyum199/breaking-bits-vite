@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 // importing assests
-import BirdsAudio from "../assets/Audio/crickets-at-night-in-nature.wav";
-import ClockAudio from "../assets/Audio/clock-tick-tock-sound.mp3";
-import Clown from "../assets/images/Clown.png";
+import BirdsAudio from "../assets/Audio/bg.mp3";
+import ClockAudio from "../assets/Audio/tik.mp3";
+import Clown from "../assets/images/1.png";
+import Infinite from "../assets/images/ICP Logo.png";
 import desktop from "../assets/images/Clock_Timer_Desktop.png";
 import mobile from "../assets/images/Clock_Timer_Mobile.png";
 import IcpSwap from "../assets/images/icpswap_logo2.png";
 import InternetICP from "../assets/images/internet-computer-icp-logo.png";
-import OpenChat from "../assets/images/openchat_logo.png";
+import OpenChat from "../assets/images/4.png";
 import WindOge from "../assets/images/Windoge98.png";
 import Twittercon from "../assets/images/twitter.svg";
 import TelegramIcon from "../assets/images/Telegram.svg";
@@ -85,6 +86,9 @@ const ComingSoon = () => {
       setRemainingTime(remainingTime);
     }, 1000);
 
+    // const coming_soon = document.querySelector('.coming_soon');
+    // coming_soon.addEventListener('click', handleManualPlay);
+
     return () => clearInterval(interval);
   }, []);
   const handleManualPlay = () => {
@@ -113,11 +117,13 @@ const ComingSoon = () => {
       
       <div className="alias_container">
         
-      
+      <a className="alias alias1 top-right" href="https://www.clownicp.org/">
+        <img src={Infinite} alt="Clown image" />
+      </a>
       <a className="alias alias1 one" href="https://www.clownicp.org/">
         <img src={Clown} alt="Clown image" />
       </a>
-      <a className="alias alias3 three" href="https://oc.app/">
+      <a className="alias alias3 three" href="https://chat.catalyze.one">
         <img src={OpenChat} alt="Clown image" />
       </a>
       <a className="alias alias4 top" href="https://info.icpswap.com/">

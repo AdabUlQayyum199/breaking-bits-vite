@@ -47,7 +47,11 @@ code {
   transform: rotate(3deg);
   scale: 0.9;
 }
-
+.top-right {
+  position: absolute;
+  right: -35%;
+  top: -20%;
+}
 .top { grid-area: top; align-self: end; }
 .one { grid-area: one; }
 .two { grid-area: two; }
@@ -205,7 +209,7 @@ header {
 }
 
 header > img {
-  width: clamp(6.25rem, 8.666vw + 1.977rem, 9.375rem);
+  width: clamp(10rem, 13.865vw + -0.939rem, 18rem);
 }
 
 .social_icons img {
