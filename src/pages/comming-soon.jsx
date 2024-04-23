@@ -114,24 +114,31 @@ const ComingSoon = () => {
         src={desktop}
         useMap="#image-map"
       />
-      
+
       <div className="alias_container">
-        
-      <a className="alias alias1 top-right" href="https://www.clownicp.org/">
-        <img src={Infinite} alt="Clown image" />
-      </a>
-      <a className="alias alias1 one" href="https://www.clownicp.org/">
-        <img src={Clown} alt="Clown image" />
-      </a>
-      <a className="alias alias3 three" href="https://chat.catalyze.one">
-        <img src={OpenChat} alt="Clown image" />
-      </a>
-      <a className="alias alias4 top" href="https://info.icpswap.com/">
-        <img src={IcpSwap} alt="Clown image" />
-      </a>
-      <a className="alias alias5 two" href="https://windoge98.com/">
-        <img src={WindOge} alt="Clown image" />
-      </a>
+        <a
+          id="infinity_logo"
+          className="alias alias1 top-right"
+          href="https://www.clownicp.org/"
+        >
+          <img src={Infinite} alt="Clown image" />
+        </a>
+        <a
+          id="alias1"
+          className="alias alias1 one"
+          href="https://www.clownicp.org/"
+        >
+          <img src={Clown} alt="Clown image" />
+        </a>
+        <a className="alias alias3 three" href="https://chat.catalyze.one">
+          <img src={OpenChat} alt="Clown image" />
+        </a>
+        <a className="alias alias4 top" href="https://info.icpswap.com/">
+          <img src={IcpSwap} alt="Clown image" />
+        </a>
+        <a className="alias alias5 two" href="https://windoge98.com/">
+          <img src={WindOge} alt="Clown image" />
+        </a>
       </div>
 
       <header>

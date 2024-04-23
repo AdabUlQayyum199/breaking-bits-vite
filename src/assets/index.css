@@ -37,8 +37,8 @@ code {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-template-areas:
-      "top top top"
-      "one two three";
+    "top top top"
+    "one two three";
   position: absolute;
   gap: 0 20px;
   justify-items: center;
@@ -52,10 +52,19 @@ code {
   right: -35%;
   top: -20%;
 }
-.top { grid-area: top; align-self: end; }
-.one { grid-area: one; }
-.two { grid-area: two; }
-.three { grid-area: three; }
+.top {
+  grid-area: top;
+  align-self: end;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
 
 .alias {
   display: inline-block;
@@ -65,7 +74,9 @@ code {
   width: 46px;
   rotate: 10deg;
 }
-
+#infinity_logo {
+  rotate: unset;
+}
 .alias2 {
   width: 50px;
 }
@@ -76,14 +87,27 @@ code {
 
 .alias4 {
   width: 90px;
+  position: relative;
+  top: 7px;
 }
-
+#alias1 img,
+.alias3 img,
+.alias5 img {
+  height: 50px;
+}
+#alias1,
+.alias3,
+.alias5 {
+  position: relative;
+  top: 5px;
+}
 .alias5 {
   width: 50px;
 }
-
+.alias4 img {
+  height: 40px;
+}
 @media screen and (max-width: 789px) {
-
   .alias_container {
     max-height: max-content;
     scale: 0.55;
@@ -91,7 +115,6 @@ code {
     top: revert;
     rotate: 11deg;
   }
-
 }
 
 .alias img {
@@ -338,7 +361,7 @@ header > img {
   }
 }
 
-@media screen and (min-width: 790px) and (max-width: 1280px){
+@media screen and (min-width: 790px) and (max-width: 1280px) {
   .alias_container {
     display: none;
   }
@@ -347,4 +370,3 @@ header > img {
 .mobile_bg {
   object-position: bottom center;
 }
-
