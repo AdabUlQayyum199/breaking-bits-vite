@@ -9,6 +9,7 @@ import WebsiteLogo from "../assets/images/WebsiteLogo.png";
 import DesktopBackgroundVideo from "../assets/Videos/Pre-Launch_Desktop_Animated_.mov";
 import MobileBackgroundVideo from "../assets/Videos/Pre-Launch_Mobile_Animated_.mov";
 import Timer from "../components/Timer/timer";
+import AlliasBoard from "../components/AlliasBoard/alliasBoard";
 const ComingSoon = () => {
   // State to track if audio autoplay is prevented
   const [autoplayPrevented, setAutoplayPrevented] = useState(true);
@@ -53,17 +54,7 @@ const ComingSoon = () => {
   };
   return (
     <div className="coming_soon">
-      {/* <img className="desktop_bg coming_soon_bg" src={desktop} alt="Clown image" /> */}
-      {/* <img
-        className="mobile_bg coming_soon_bg"
-        src={mobile}
-        alt="Clown image"
-      />
-      <img
-        className="desktop_bg coming_soon_bg"
-        src={desktop}
-        useMap="#image-map"
-      /> */}
+      {/* background videos */}
       <video
         className="background_video desktop_bg coming_soon_bg"
         autoPlay
@@ -80,7 +71,8 @@ const ComingSoon = () => {
         playsInline
         src={MobileBackgroundVideo}
       ></video>
-
+      {/* our alias section */}
+      <AlliasBoard />
       {/* header */}
       <header>
         <img src={WebsiteLogo} alt="Site Logo" />

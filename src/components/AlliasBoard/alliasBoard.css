@@ -1,0 +1,28 @@
+.allias_container {
+  background-image: url("/src/assets/images/Our_Allies_Desktop.png");
+  position: absolute;
+  z-index: 99;
+  width: 400px;
+  height: 300px;
+  background-repeat: no-repeat;
+  right: 2rem;
+  background-position: center;
+  bottom: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allias_box {
+  display: flex;
+}
+.last_allias {
+  display: flex;
+  position: relative;
+  left: -4rem;
+  gap: 10px;
+  rotate: 3deg;
+}
+.last_allias img {
+  width: 70px !important;
+  height: auto;
+}

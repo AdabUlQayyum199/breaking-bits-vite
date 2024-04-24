@@ -76,6 +76,9 @@ code {
 }
 #infinity_logo {
   rotate: unset;
+  position: absolute;
+  right: 18%;
+  top: 16%;
 }
 .alias2 {
   width: 50px;
@@ -86,15 +89,12 @@ code {
 }
 
 .alias4 {
-  width: 90px;
+  width: auto;
   position: relative;
-  top: 7px;
+  top: -3.7rem;
+  left: 5rem;
 }
-#alias1 img,
-.alias3 img,
-.alias5 img {
-  height: 50px;
-}
+
 #alias1,
 .alias3,
 .alias5 {
@@ -102,7 +102,7 @@ code {
   top: 5px;
 }
 .alias5 {
-  width: 50px;
+  width: 60px;
 }
 .alias4 img {
   height: 40px;
@@ -276,10 +276,15 @@ header > img {
     top: 10px;
     left: -4%;
   }
+  .coming_soon_timer {
+    height: 930px;
+  }
 }
 @media only screen and (max-width: 1500px) {
   #seconds {
     right: 13px;
+    left: -6%;
+    top: 7px;
   }
   #hours {
     position: relative;
@@ -295,6 +300,12 @@ header > img {
     right: 6.5%;
     width: 84px;
   }
+  .coming_soon_timer {
+    height: 890px;
+  }
+  .coming_soon_timer .timer_box {
+    top: -11%;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .coming_soon_timer {
@@ -302,14 +313,46 @@ header > img {
   }
   #minutes {
     top: 5px;
-    left: 0;
   }
   #seconds {
     right: 0;
-    top: 9px;
+    top: 6px;
   }
   #hours {
-    top: -5px;
+    top: 5px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .allias_container {
+    right: 0;
+    width: 350px;
+    height: 250px;
+  }
+  #infinity_logo {
+    top: 10%;
+    right: 13.5%;
+  }
+  .last_allias img {
+    width: 60px !important;
+  }
+  .alias4 {
+    top: -3.3rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  #minutes {
+    top: 5px;
+    left: -5px;
+  }
+  #seconds {
+    top: 7px;
+    left: -15px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .allias_container {
+    bottom: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -338,6 +381,17 @@ header > img {
     width: 100px;
     height: 100px;
   }
+  .coming_soon_timer {
+    background-image: url("../assets/images/CountDown_Clock_Mobile_Element.png");
+  }
+  .coming_soon_timer .timer_box {
+    top: -8%;
+    left: -1rem;
+  }
+  #seconds {
+    top: -4px;
+    left: -14px;
+  }
 }
 @media only screen and (max-width: 500px) {
   .partner_logos img {
@@ -346,6 +400,13 @@ header > img {
   }
   .partner_logos {
     gap: 0rem;
+  }
+  .coming_soon_timer .timer_box {
+    top: -7%;
+    gap: 1rem;
+  }
+  #hours {
+    font-size: 55px;
   }
 }
 
