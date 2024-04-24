@@ -2,35 +2,20 @@ import React, { useEffect, useState } from "react";
 // importing assests
 import BirdsAudio from "../assets/Audio/bg.mp3";
 import ClockAudio from "../assets/Audio/tik.mp3";
-import Clown from "../assets/images/1.png";
-import Infinite from "../assets/images/ICP Logo.png";
-import desktop from "../assets/images/Clock_Timer_Desktop.gif";
-import mobile from "../assets/images/Clock_Timer_Mobile.gif";
-import IcpSwap from "../assets/images/icpswap_logo2.png";
-import InternetICP from "../assets/images/internet-computer-icp-logo.png";
-import OpenChat from "../assets/images/4.png";
-import WindOge from "../assets/images/Windoge98.png";
 import Twittercon from "../assets/images/twitter.svg";
 import TelegramIcon from "../assets/images/Telegram.svg";
 import DiscordIcon from "../assets/images/discord.svg";
 import WebsiteLogo from "../assets/images/WebsiteLogo.png";
-
+import DesktopBackgroundVideo from "../assets/Videos/Pre-Launch_Desktop_Animated_.mov";
+import MobileBackgroundVideo from "../assets/Videos/Pre-Launch_Mobile_Animated_.mov";
+import Timer from "../components/Timer/timer";
 const ComingSoon = () => {
-  const [remainingTime, setRemainingTime] = useState({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
   // State to track if audio autoplay is prevented
   const [autoplayPrevented, setAutoplayPrevented] = useState(true);
 
   useEffect(() => {
     // Set the target deadline in local storage
     const setTargetDeadline = () => {
-      const deadline = new Date("2024-05-10T12:00:00"); // May 10th at 12:00 PM
-      localStorage.setItem("endingTime", deadline.getTime().toString());
-
       const birdsAudioElement = document.getElementById("birdsAudio");
       const clockAudioElement = document.getElementById("clockAudio");
 
@@ -55,41 +40,6 @@ const ComingSoon = () => {
         }
       }
     };
-
-    // Calculate remaining time in hours, minutes, and seconds
-    const calculateRemainingTime = () => {
-      const currentTime = new Date().getTime();
-      const endingTime = parseInt(localStorage.getItem("endingTime"), 10);
-
-      if (isNaN(endingTime)) {
-        // Handle invalid or missing deadline
-        return { hours: 0, minutes: 0, seconds: 0 };
-      }
-
-      let timeDiff = endingTime - currentTime;
-      if (timeDiff < 0) {
-        // Handle case where deadline has passed
-        timeDiff = 0;
-      }
-
-      const hours = Math.floor(timeDiff / (1000 * 60 * 60));
-      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-      return { hours, minutes, seconds };
-    };
-
-    setTargetDeadline();
-
-    const interval = setInterval(() => {
-      const remainingTime = calculateRemainingTime();
-      setRemainingTime(remainingTime);
-    }, 1000);
-
-    // const coming_soon = document.querySelector('.coming_soon');
-    // coming_soon.addEventListener('click', handleManualPlay);
-
-    return () => clearInterval(interval);
   }, []);
   const handleManualPlay = () => {
     const birdsAudioElement = document.getElementById("birdsAudio");
@@ -104,7 +54,7 @@ const ComingSoon = () => {
   return (
     <div className="coming_soon">
       {/* <img className="desktop_bg coming_soon_bg" src={desktop} alt="Clown image" /> */}
-      <img
+      {/* <img
         className="mobile_bg coming_soon_bg"
         src={mobile}
         alt="Clown image"
@@ -113,34 +63,25 @@ const ComingSoon = () => {
         className="desktop_bg coming_soon_bg"
         src={desktop}
         useMap="#image-map"
-      />
+      /> */}
+      <video
+        className="background_video desktop_bg coming_soon_bg"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src={DesktopBackgroundVideo}
+      ></video>
+      <video
+        className="mobile_bg coming_soon_bg"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src={MobileBackgroundVideo}
+      ></video>
 
-      <div className="alias_container">
-        <a
-          id="infinity_logo"
-          className="alias alias1 top-right"
-          href="https://www.clownicp.org/"
-        >
-          <img src={Infinite} alt="Clown image" />
-        </a>
-        <a
-          id="alias1"
-          className="alias alias1 one"
-          href="https://www.clownicp.org/"
-        >
-          <img src={Clown} alt="Clown image" />
-        </a>
-        <a className="alias alias3 three" href="https://chat.catalyze.one">
-          <img src={OpenChat} alt="Clown image" />
-        </a>
-        <a className="alias alias4 top" href="https://info.icpswap.com/">
-          <img src={IcpSwap} alt="Clown image" />
-        </a>
-        <a className="alias alias5 two" href="https://windoge98.com/">
-          <img src={WindOge} alt="Clown image" />
-        </a>
-      </div>
-
+      {/* header */}
       <header>
         <img src={WebsiteLogo} alt="Site Logo" />
         {/* Scoial Icons */}
@@ -188,17 +129,7 @@ const ComingSoon = () => {
         ></audio>
       </div>
       {/* coming_soon_timer */}
-      <div className="coming_soon_timer">
-        <span id="hours">
-          {remainingTime.hours.toString().padStart(2, "0")}
-        </span>
-        <span id="minutes">
-          {remainingTime.minutes.toString().padStart(2, "0")}
-        </span>
-        <span id="seconds">
-          {remainingTime.seconds.toString().padStart(2, "0")}
-        </span>
-      </div>
+      <Timer />
       {/* button_div */}
       <div className="button_div">
         {autoplayPrevented && (
@@ -206,24 +137,6 @@ const ComingSoon = () => {
             Play Music
           </button>
         )}
-      </div>
-      <div className="partner_logos">
-        <a href="https://www.clownicp.org/">
-          <img src={Clown} alt="Clown image" />
-        </a>
-        <a href="https://info.icpswap.com/">
-          {" "}
-          <img src={InternetICP} alt="Clown image" />
-        </a>
-        <a href="https://oc.app/">
-          <img src={OpenChat} alt="Clown image" />
-        </a>
-        <a href="https://info.icpswap.com/">
-          <img src={IcpSwap} alt="Clown image" />
-        </a>
-        <a href="https://windoge98.com/">
-          <img src={WindOge} alt="Clown image" />
-        </a>
       </div>
     </div>
   );
