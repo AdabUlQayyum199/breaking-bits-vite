@@ -26,3 +26,11 @@
   width: 70px !important;
   height: auto;
 }
+
+/* media query */
+
+@media only screen and (max-width: 768px) {
+  .allias_container {
+    background-image: url("../../assets/images/Mobile_Board.png");
+  }
+}

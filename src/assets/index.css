@@ -382,15 +382,30 @@ header > img {
     height: 100px;
   }
   .coming_soon_timer {
-    background-image: url("../assets/images/CountDown_Clock_Mobile_Element.png");
+    background-image: url("../assets/images/CountDown_Clock_Desktop_Element.png");
+    height: 850px;
   }
   .coming_soon_timer .timer_box {
-    top: -8%;
-    left: -1rem;
+    top: -9%;
+    left: 1rem;
   }
   #seconds {
     top: -4px;
     left: -14px;
+  }
+  .last_allias {
+    rotate: 10deg;
+    top: 2.5rem;
+  }
+  .alias4 {
+    rotate: 10deg;
+    top: -2rem;
+    left: 3rem;
+  }
+  #infinity_logo {
+    top: 6rem;
+    rotate: 10deg;
+    right: 7rem;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -402,8 +417,9 @@ header > img {
     gap: 0rem;
   }
   .coming_soon_timer .timer_box {
-    top: -7%;
+    top: -9%;
     gap: 2rem;
+    left: 1.5rem;
   }
 
   #minutes,
@@ -414,7 +430,39 @@ header > img {
     left: -7px;
   }
   #minutes {
-    left: 0;
+    left: -1rem;
+  }
+  #hours {
+    left: -1.5rem;
+  }
+  .allias_container {
+    height: 200px;
+    width: 300px;
+    background-size: contain;
+    right: -1rem;
+  }
+  .last_allias img {
+    width: 45px !important;
+  }
+  .last_allias {
+    top: 1.5rem;
+    gap: 5px;
+    left: -3.5rem;
+  }
+  .alias4 img {
+    width: 80%;
+    height: 35px;
+  }
+  .alias4 {
+    top: -1.5rem;
+    rotate: 13deg;
+  }
+  #infinity_logo {
+    top: 4.5rem;
+    right: 6rem;
+  }
+  .alias5 {
+    width: auto;
   }
 }
 
@@ -447,7 +495,20 @@ header > img {
     top: 2px;
     font-size: 42px;
   }
+  .allias_container {
+    width: 280px;
+  }
+  #infinity_logo {
+    right: 5rem;
+  }
+  #hours {
+    left: -2rem;
+  }
+  #play_button {
+    left: 1rem;
+  }
 }
+
 @media screen and (min-width: 789px) {
   .alias_container {
     bottom: initial;
