@@ -128,7 +128,7 @@ code {
 #hours {
   font-size: 70px;
   position: relative;
-  top: -10px;
+  top: -4px;
   left: -4%;
 }
 #minutes {
@@ -139,9 +139,9 @@ code {
 }
 #seconds {
   position: relative;
-  top: 5%;
+  top: -3px;
   font-size: 60px;
-  left: -3%;
+  left: 0%;
 }
 
 @media screen and (max-width: 789px) {
@@ -481,7 +481,7 @@ header > img {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   #minutes,
   #hours {
     font-size: 45px;
