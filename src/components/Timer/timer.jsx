@@ -8,6 +8,34 @@ const timer = () => {
   });
 
   useEffect(() => {
+    const setTargetDeadline = () => {
+      const deadline = new Date("2024-05-10T12:00:00"); // May 10th at 12:00 PM
+      localStorage.setItem("endingTime", deadline.getTime().toString());
+
+      const birdsAudioElement = document.getElementById("birdsAudio");
+      const clockAudioElement = document.getElementById("clockAudio");
+
+      if (birdsAudioElement && clockAudioElement) {
+        birdsAudioElement.loop = true;
+        clockAudioElement.loop = true;
+
+        // Check if audio can autoplay with sound
+        const playPromise1 = birdsAudioElement.play();
+        const playPromise2 = clockAudioElement.play();
+
+        if (playPromise1 !== undefined && playPromise2 !== undefined) {
+          Promise.all([playPromise1, playPromise2])
+          .then(() => {
+            // Autoplay started for both audios
+          })
+          .catch((error) => {
+            // Autoplay was prevented, possibly due to browser restrictions
+            console.error("Autoplay prevented:", error);
+            setAutoplayPrevented(true);
+          });
+        }
+      }
+    };
     const calculateRemainingTime = () => {
       const currentTime = new Date().getTime();
       const endingTime = parseInt(localStorage.getItem("endingTime"), 10);
@@ -27,10 +55,9 @@ const timer = () => {
       const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-      console.log(hours, minutes, seconds);
       return { hours, minutes, seconds };
     };
-
+    setTargetDeadline();
     const interval = setInterval(() => {
       const remainingTime = calculateRemainingTime();
       setRemainingTime(remainingTime);
