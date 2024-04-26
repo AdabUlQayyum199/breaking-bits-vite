@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // importing assests
-import BirdsAudio from "../assets/Audio/bg.mp3";
+import BirdsAudio from "../assets/Audio/Background_Sound.mp3";
 import ClockAudio from "../assets/Audio/tik.mp3";
 import Twittercon from "../assets/images/twitter.svg";
 import TelegramIcon from "../assets/images/Telegram.svg";
@@ -10,6 +10,7 @@ import DesktopBackgroundVideo from "../assets/Videos/Pre-Launch_Desktop_Animated
 import MobileBackgroundVideo from "../assets/Videos/Pre-Launch_Mobile_Animated_.mov";
 import Timer from "../components/Timer/timer";
 import AlliasBoard from "../components/AlliasBoard/alliasBoard";
+import VoumeOn from "../assets/images/volume_On.svg";
 const ComingSoon = () => {
   // State to track if audio autoplay is prevented
   const [autoplayPrevented, setAutoplayPrevented] = useState(true);
@@ -125,9 +126,12 @@ const ComingSoon = () => {
       {/* button_div */}
       <div className="button_div">
         {autoplayPrevented && (
-          <button id="play_button" onClick={handleManualPlay}>
-            Play Music
-          </button>
+          <img
+            onClick={handleManualPlay}
+            id="play_button"
+            src={VoumeOn}
+            alt="Volume On"
+          />
         )}
       </div>
     </div>
