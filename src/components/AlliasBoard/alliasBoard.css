@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 .allias_box {
   display: flex;
@@ -21,6 +22,7 @@
   left: -4rem;
   gap: 10px;
   rotate: 3deg;
+  top: 5.8rem;
 }
 .last_allias img {
   width: 70px !important;
@@ -28,7 +30,11 @@
 }
 
 /* media query */
-
+@media only screen and (max-width: 980px) {
+  .allias_container {
+    display: block;
+  }
+}
 @media only screen and (max-width: 768px) {
   .allias_container {
     background-image: url("../../assets/images/Mobile_Board.png");

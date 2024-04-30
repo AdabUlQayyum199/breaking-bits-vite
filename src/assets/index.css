@@ -146,11 +146,11 @@ code {
 
 @media screen and (max-width: 789px) {
   .desktop_bg {
-    display: none;
+    display: block;
   }
 
   .mobile_bg {
-    display: block;
+    display: none;
   }
 }
 
@@ -309,13 +309,13 @@ header > img {
   }
   #infinity_logo {
     top: 10%;
-    right: 13.5%;
+    right: 9.5%;
   }
   .last_allias img {
     width: 60px !important;
   }
   .alias4 {
-    top: -3.3rem;
+    top: 2.5rem;
     width: 100%;
   }
 }
@@ -331,9 +331,8 @@ header > img {
 }
 @media only screen and (max-width: 980px) {
   .allias_container {
-    left: 50%;
     bottom: 0;
-    transform: translateX(-50%);
+    right: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -376,12 +375,12 @@ header > img {
   }
   .last_allias {
     rotate: 10deg;
-    top: 2rem;
+    top: 8rem;
     left: -5rem;
   }
   .alias4 {
     rotate: 10deg;
-    top: -1.5rem;
+    top: 4.5rem;
     left: 5rem;
   }
   #infinity_logo {
@@ -433,18 +432,18 @@ header > img {
     width: 45px !important;
   }
   .last_allias {
-    top: 1.5rem;
+    top: 6.5rem;
     gap: 5px;
-    left: -3.5rem;
+    left: -5rem;
   }
   .alias4 img {
-    width: 100%;
+    width: 80%;
     height: 40px;
   }
   .alias4 {
-    top: -1rem;
+    top: 4rem;
     rotate: 13deg;
-    left: 4rem;
+    left: 5rem;
   }
   #infinity_logo {
     top: 1.4rem;
@@ -467,6 +466,13 @@ header > img {
   .alias_container {
     bottom: 11%;
     right: 2rem;
+  }
+  .desktop_bg {
+    display: none;
+  }
+
+  .mobile_bg {
+    display: block;
   }
 }
 
