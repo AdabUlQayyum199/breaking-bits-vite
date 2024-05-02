@@ -417,6 +417,7 @@ header > img {
   }
   #seconds {
     left: -9px;
+    font-size: 45px;
     top: -6px;
   }
   #minutes {
