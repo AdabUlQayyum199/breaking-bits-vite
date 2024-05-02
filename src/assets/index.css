@@ -462,6 +462,9 @@ header > img {
     left: 0px;
     bottom: 38px;
   }
+  header > img {
+    width: 125px;
+  }
 }
 
 /* queries */
