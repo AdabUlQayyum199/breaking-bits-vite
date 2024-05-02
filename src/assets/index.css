@@ -175,11 +175,12 @@ code {
   align-items: center;
   text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
   background: url("/src/assets/images/CountDown_Clock_Desktop_Element.png");
-  height: 1100px;
+  height: 1060px;
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  left: -33px;
 }
 
 #play_button {
@@ -219,6 +220,7 @@ header {
   gap: 1rem;
   align-items: space-between;
   width: 95%;
+  z-index: 999;
 }
 
 header > img {
@@ -405,16 +407,17 @@ header > img {
   }
   .coming_soon_timer .timer_box {
     top: -9%;
-    gap: 2rem;
+    gap: 1rem;
     left: 1.5rem;
   }
 
   #minutes,
   #hours {
-    font-size: 52px;
+    font-size: 48px;
   }
   #seconds {
-    left: -7px;
+    left: -9px;
+    top: -6px;
   }
   #minutes {
     left: -1rem;
@@ -427,6 +430,7 @@ header > img {
     width: 300px;
     background-size: contain;
     right: -1rem;
+    bottom: 5rem;
   }
   .last_allias img {
     width: 45px !important;
@@ -451,6 +455,11 @@ header > img {
   }
   .alias5 {
     width: auto;
+  }
+  .coming_soon_timer {
+    height: 665px;
+    left: -30px;
+    bottom: 38px;
   }
 }
 
@@ -484,9 +493,10 @@ header > img {
   }
   .coming_soon_timer .timer_box {
     gap: 1.2rem;
+    top: -10.5%;
   }
   #seconds {
-    left: 5px;
+    left: -10px;
     top: 2px;
     font-size: 42px;
   }

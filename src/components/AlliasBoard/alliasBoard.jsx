@@ -14,21 +14,38 @@ const alliasBoard = () => {
         <a
           id="infinity_logo"
           className="alias alias1"
-          href="https://www.clownicp.org/"
+          target="_blank"
+          href="https://internetcomputer.org/"
         >
           <img src={Infinite} alt="Clown image" />
         </a>
-        <a className="alias alias4 top" href="https://info.icpswap.com/">
+        <a
+          className="alias alias4 top"
+          target="_blank"
+          href="https://info.icpswap.com/"
+        >
           <img src={IcpSwap} alt="Clown image" />
         </a>
         <div className="last_allias">
-          <a className="clown_sec" href="https://www.clownicp.org/">
+          <a
+            className="clown_sec"
+            target="_blank"
+            href="https://www.clownicp.org/"
+          >
             <img src={Clown} alt="Clown image" />
           </a>
-          <a className="alias alias5 two" href="https://windoge98.com/">
+          <a
+            className="alias alias5 two"
+            target="_blank"
+            href="https://windoge98.com/"
+          >
             <img src={WindOge} alt="Clown image" />
           </a>
-          <a className="alias alias3 three" href="https://chat.catalyze.one">
+          <a
+            className="alias alias3 three"
+            target="_blank"
+            href="https://chat.catalyze.one"
+          >
             <img src={OpenChat} alt="Clown image" />
           </a>
         </div>
