@@ -430,8 +430,9 @@ header > img {
     height: 200px;
     width: 300px;
     background-size: contain;
-    right: -1rem;
-    bottom: 5rem;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
   }
   .last_allias img {
     width: 45px !important;
@@ -506,6 +507,7 @@ header > img {
   }
   .allias_container {
     width: 280px;
+    left: 50%;
   }
   #infinity_logo {
     right: 6.5rem;
