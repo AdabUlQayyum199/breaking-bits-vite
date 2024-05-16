@@ -14,8 +14,8 @@ function App() {
     <Router>
       <TimerRedirect endTime={endTime}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<CommingSoon />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<CommingSoon />} />
         </Routes>
       </TimerRedirect>
     </Router>

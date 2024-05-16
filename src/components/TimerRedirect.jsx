@@ -1,23 +1,33 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const TimerRedirect = ({ children, endTime }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const checkTime = () => {
       const currentTime = new Date();
+
       if (currentTime >= endTime) {
-        navigate("/home");
+        // After end time, allow only /home route
+        if (location.pathname !== "/home") {
+          navigate("/home");
+        }
+      } else {
+        // Before end time, allow only / route
+        if (location.pathname !== "/") {
+          navigate("/");
+        }
       }
     };
 
+    // Check time on mount and set interval to check periodically
+    checkTime();
     const timer = setInterval(checkTime, 1000);
 
     return () => clearInterval(timer);
-  }, [endTime, navigate]);
+  }, [endTime, location, navigate]);
 
   return <>{children}</>;
 };
