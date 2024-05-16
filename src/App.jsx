@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   // Set the end time to 2:15 PM on May 16, 2024
-  const endTime = new Date("2024-05-20T12:00:00");
+  const endTime = new Date("2024-05-16T12:00:00");
 
   return (
     <Router>
