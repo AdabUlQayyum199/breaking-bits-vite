@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+  --glow-color: hsl(129.32deg 66.8% 52.75%);
+  --animate-duration: 1400ms;
+  --animate-delay: 0.4s;
+}
+body {
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+/* Button Comp CSS Start */
+.glowing-btn {
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 7px 10px;
+  width: 225px;
+  border: 0.15em solid #ffffff;
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 10px;
+
+  -webkit-box-shadow: inset 0px 0px 20px var(--glow-color),
+    0px 0px 20px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 20px var(--glow-color),
+    0px 0px 20px var(--glow-color);
+  box-shadow: inset 0px 0px 20px var(--glow-color),
+    0px 0px 20px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 0.45em;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: none;
+  /* animation: none; */
+  border-color: #36d74f;
+}
+
+.glowing-btn:hover .glowing-txt {
+  /* animation: none; */
+}
+
+.glowing-btn:hover .faulty-letter {
+  /* animation: none; */
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn {
+    font-size: 1em;
+  }
+}
+
+/* Button Comp CSS End */
+
+/* Moon Comp CSS Start */
+
+.moon_comp {
+  background-image: url("./assets/images/Moon.png");
+  height: 250px;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  position: relative;
+  top: 1.5rem;
+  left: 4rem;
+}
+
+/* Moon Comp CSS End */
+
+/* Home Page CSS */
+.banner_sec {
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.banner_sec h2 {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-family: "Roboto Mono", monospace !important;
+  display: none;
+}
+.banner_sec #breaking_bits_logo {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  z-index: 999;
+  opacity: 0.4;
+}
+.home_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mobile_bg {
+  display: none !important;
+}
+
+.info_sec {
+  width: min(100%, 75%);
+  margin: -13rem auto 4rem;
+  text-align: center;
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 0;
+  z-index: 999999;
+  position: relative;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  cursor: pointer;
+}
+.info_box {
+  width: 33%;
+  transition: all 0.3s ease-in-out;
+}
+.info_sec .info_box:hover {
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.info_sec:hover > :not(:hover) {
+  opacity: 0.5 !important;
+}
+.info_content {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.info_content p {
+  font-size: 15px;
+  margin: 7px 0;
+}
+.info_content h2 {
+  margin: 7px 0;
+}
+
+.info_box img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.info_box:hover img {
+  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(20, 226, 1, 0.5)); */
+}
+/* Home Page CSS End */
+
+/* Our Allies CSS Start */
+.our_allies {
+  width: min(100%, 75%);
+  margin: 0rem auto;
+  padding: 2rem 0 4rem;
+}
+.our_allies h2 {
+  font-size: clamp(3.8rem, 2vw, 5rem);
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  color: #ffffff;
+}
+.our_allies_logos img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+.our_allies_logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+/* Our Allies CSS End */
+
+/* Footer CSS Start */
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer_background_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Move the video behind other content */
+}
+.footer_sec {
+  border-top: 1px solid #36d74e83;
+  width: min(100%, 75%);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.footer_sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_sec h2,
+.footer_sec h2 a {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  margin: 0;
+  color: #ffffff;
+}
+.footer_sec h2 a {
+  font-size: 15px;
+}
+.footer_sec h2 img {
+  width: 40px;
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+}
+.footer_sec .social_icons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: end;
+}
+.footer_sec .social_icons img {
+  transition: all 0.2s ease-in-out;
+  width: 35px;
+  height: 35px;
+}
+.footer_sec .social_icons img:hover {
+  transform: translateY(-10px);
+}
+/* Footer CSS End */
+
+/* Back to Top CSS Start */
+.back_to_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 5px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  cursor: pointer;
+}
+.back_to_top h5 {
+  font-size: 15px;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  margin: 0;
+  color: #ffffff;
+}
+.back_to_top img {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(20, 226, 1, 0.5));
+  position: relative;
+  left: 5px;
+  height: 40px;
+}
+/* Back to Top CSS End */
+
+/* Accordian CSS start */
+
+.chakra-accordion__item button {
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.chakra-accordion__item span {
+  color: #fff;
+  font-family: "Roboto Mono", monospace !important;
+  font-optical-sizing: auto;
+  font-size: 24px !important;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  text-align: center;
+}
+.chakra-accordion__item h2 {
+  font-weight: 400 !important;
+  margin-bottom: 15px;
+}
+.chakra-accordion__item .chakra-accordion__icon {
+  /* width: 25px;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+  height: 25px;
+  color: #ffffff; */
+  display: none;
+}
+.chakra-accordion__item .chakra-accordion__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+  padding: 0;
+  font-family: "Roboto Mono", monospace !important;
+  font-optical-sizing: auto;
+  text-shadow: 0px 0px 20px #36d74f, 0px 0px 20px #36d74f;
+}
+.info_sec .chakra-accordion {
+  display: none;
+}
+/* Accordian CSS End */
+
+/* Media Queries */
+@media only screen and (max-width: 1366px) {
+  .info_sec {
+    gap: 2rem;
+    margin: -15rem auto 2rem;
+  }
+  .our_allies h2 {
+    margin: 2rem 0;
+    font-size: 55px;
+  }
+  .our_allies_logos img {
+    width: 175px;
+    height: 125px;
+  }
+  .our_allies_logos {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .moon_comp {
+    height: 225px;
+    width: 225px;
+  }
+  .glowing-btn {
+    font-size: 45px;
+  }
+  .info_sec,
+  .footer_sec,
+  .our_allies {
+    width: min(100%, 80%);
+  }
+  .our_allies h2 {
+    margin: 1rem 0;
+    font-size: 50px;
+  }
+  .our_allies_logos img {
+    width: 160px;
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .moon_comp {
+    height: 210px;
+    width: 210px;
+  }
+  .glowing-btn {
+    font-size: 23.5px;
+    width: 180px;
+  }
+  .banner_sec {
+    height: 90vh;
+  }
+  .info_sec {
+    gap: 2rem;
+    margin: -13rem auto 2rem;
+  }
+  .info_sec,
+  .our_allies,
+  .footer_sec {
+    width: min(100%, 85%);
+  }
+  .banner_sec #breaking_bits_logo {
+    width: 175px;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .back_to_top {
+    bottom: 90px;
+    right: 20px;
+  }
+  .info_sec,
+  .our_allies,
+  .footer_sec {
+    width: min(100%, 90%);
+  }
+  .our_allies {
+    padding: 2rem 0 3rem;
+  }
+  .our_allies h2 {
+    margin: 0rem 0;
+    font-size: 45px;
+  }
+  .back_to_top {
+    z-index: 999999999;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .glowing-btn {
+    font-size: 19.5px;
+    width: 160px;
+  }
+  .banner_sec #breaking_bits_logo {
+    width: 160px;
+  }
+  .banner_sec {
+    height: 70vh;
+  }
+
+  .moon_comp {
+    height: 170px;
+    width: 170px;
+    top: 1.5rem;
+  }
+  .info_sec {
+    gap: 2rem;
+    margin: -11rem auto 2rem;
+  }
+  .info_content h2 {
+    margin: 7px 0;
+    font-size: 23px;
+  }
+  .info_content p {
+    font-size: 14px;
+  }
+  .info_sec {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .info_box {
+    width: 44%;
+  }
+  .our_allies h2 {
+    font-size: 40px;
+  }
+  .our_allies_logos img {
+    width: 130px;
+    height: 100px;
+  }
+  .our_allies_logos {
+    gap: 1.5rem;
+  }
+  .back_to_top img {
+    height: 30px;
+  }
+  .back_to_top h5 {
+    font-size: 13px;
+  }
+  .info_sec #info_box01,
+  .info_sec #info_box02,
+  .info_sec #info_box03 {
+    display: none;
+  }
+  .info_sec .chakra-accordion {
+    display: block;
+  }
+  .info_sec:hover > :not(:hover) {
+    opacity: 1;
+  }
+  .info_sec .info_box:hover {
+    transform: unset;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .our_allies_logos img {
+    width: 140px;
+    height: 70px;
+  }
+  .our_allies h2 {
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  .info_box {
+    width: 45%;
+  }
+  .info_box:last-of-type {
+    width: 80%;
+  }
+  .mobile_bg {
+    display: block !important;
+  }
+  .desktop_bg {
+    display: none !important;
+  }
+  .banner_sec {
+    height: 100vh;
+  }
+  .info_sec {
+    gap: 2rem;
+    margin: -3rem auto 0rem;
+  }
+  .moon_comp {
+    height: 200px;
+    width: 200px;
+    top: 4.5rem;
+    left: 0rem;
+  }
+  .info_box {
+    width: 80%;
+  }
+  .footer_sec {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .social_icons img {
+    height: 35px;
+  }
+  .back_to_top img {
+    height: 25px;
+  }
+  .back_to_top h5 {
+    font-size: 11px;
+  }
+  .our_allies_logos {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .banner_sec h2 {
+    display: block;
+  }
+  .glowing-btn {
+    font-size: 21px;
+    font-weight: 400;
+    width: 170px;
+  }
+  .banner_sec #breaking_bits_logo {
+    display: none;
+  }
+  .home_bg {
+    object-fit: fill;
+  }
+}

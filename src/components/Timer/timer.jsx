@@ -9,7 +9,7 @@ const timer = () => {
 
   useEffect(() => {
     const setTargetDeadline = () => {
-      const deadline = new Date("2024-05-10T12:00:00"); // May 10th at 12:00 PM
+      const deadline = new Date("2024-05-20T12:00:00"); // May 10th at 12:00 PM
       localStorage.setItem("endingTime", deadline.getTime().toString());
 
       const birdsAudioElement = document.getElementById("birdsAudio");
@@ -25,14 +25,14 @@ const timer = () => {
 
         if (playPromise1 !== undefined && playPromise2 !== undefined) {
           Promise.all([playPromise1, playPromise2])
-          .then(() => {
-            // Autoplay started for both audios
-          })
-          .catch((error) => {
-            // Autoplay was prevented, possibly due to browser restrictions
-            console.error("Autoplay prevented:", error);
-            setAutoplayPrevented(true);
-          });
+            .then(() => {
+              // Autoplay started for both audios
+            })
+            .catch((error) => {
+              // Autoplay was prevented, possibly due to browser restrictions
+              console.error("Autoplay prevented:", error);
+              setAutoplayPrevented(true);
+            });
         }
       }
     };
