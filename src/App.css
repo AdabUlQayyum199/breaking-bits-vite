@@ -423,6 +423,7 @@ footer {
   position: absolute;
   bottom: 15rem;
   left: 4rem;
+  opacity: 0.7;
 }
 /* Back to Top CSS Start */
 .back_to_top {
@@ -715,5 +716,11 @@ footer {
   }
   .home_bg {
     object-fit: fill;
+  }
+  #speaker_button {
+    bottom: unset;
+    bottom: 2rem;
+    left: 1rem;
+    opacity: 0.7;
   }
 }
