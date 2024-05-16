@@ -5,7 +5,6 @@ import React from "react";
 import Footer from "../components/Footer";
 import Backtotop from "../components/Backtotop";
 import Infobox from "../components/Infobox";
-import BackgroundAudio from "../components/Audios";
 import BackgroundVideos from "../components/BannerVideos";
 
 const Home = () => {
@@ -13,8 +12,7 @@ const Home = () => {
     <>
       {/* Banner Section */}
       <BackgroundVideos />
-      {/* background audio */}
-      <BackgroundAudio />
+
       {/* Info Section */}
       <Infobox />
       {/* footer section */}

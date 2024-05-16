@@ -4,6 +4,7 @@ import MobileBackgroundVideo from "../assets/Videos/Mobile_UI Animated.mp4";
 import DesktopBackgroundVideo from "../assets/Videos/Post-Launch_Desktop_Animated_.mp4";
 import MoonComp from "./MoonComp";
 import WebsiteLogo from "../assets/images/WebsiteLogo.png";
+import BackgroundAudio from "../components/Audios";
 
 const BannerVideos = () => {
   return (
@@ -32,6 +33,8 @@ const BannerVideos = () => {
         ></video>
         <MoonComp />
         <h2>swipe to explore</h2>
+        {/* background audio */}
+        <BackgroundAudio />
       </div>
     </>
   );

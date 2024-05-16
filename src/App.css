@@ -417,7 +417,13 @@ footer {
   transform: translateY(-10px);
 }
 /* Footer CSS End */
-
+#speaker_button {
+  cursor: pointer;
+  /* z-index: 99999; */
+  position: absolute;
+  bottom: 15rem;
+  left: 4rem;
+}
 /* Back to Top CSS Start */
 .back_to_top {
   display: flex;

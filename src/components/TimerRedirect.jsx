@@ -11,8 +11,8 @@ const TimerRedirect = ({ children, endTime }) => {
 
       if (currentTime >= endTime) {
         // After end time, allow only /home route
-        if (location.pathname !== "/home") {
-          navigate("/home");
+        if (location.pathname !== "/") {
+          navigate("/");
         }
       } else {
         // Before end time, allow only / route
