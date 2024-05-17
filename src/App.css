@@ -703,9 +703,9 @@ footer {
     margin: -3rem auto 0rem;
   }
   .moon_comp {
-    height: 120px;
-    width: 120px;
-    top: 1.5rem;
+    height: 200px;
+    width: 200px;
+    top: 2.5rem;
     left: 0rem;
   }
   .info_box {
@@ -732,9 +732,9 @@ footer {
     display: block;
   }
   .glowing-btn {
-    font-size: 13px;
+    font-size: 28px;
     font-weight: 400;
-    width: auto;
+    width: 180px;
   }
   .banner_sec #breaking_bits_logo {
     display: none;
