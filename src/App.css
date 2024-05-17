@@ -34,6 +34,7 @@ body {
   font-size: 2em;
   font-weight: 900;
   letter-spacing: 10px;
+  background-color: #36d74f7d;
 
   -webkit-box-shadow: inset 0px 0px 20px var(--glow-color),
     0px 0px 20px var(--glow-color);
@@ -460,6 +461,8 @@ footer {
   border: none;
   padding: 0;
   cursor: pointer;
+  flex-direction: column;
+  gap: 1rem;
 }
 .chakra-accordion__item span {
   color: #fff;
@@ -495,6 +498,19 @@ footer {
 }
 /* Accordian CSS End */
 
+@media only screen and (max-width: 1440px) {
+  .moon_comp {
+    height: 155px;
+    width: 155px;
+  }
+  .glowing-btn {
+    font-size: 14px;
+    width: auto;
+  }
+  .banner_sec #breaking_bits_logo {
+    width: 180px;
+  }
+}
 /* Media Queries */
 @media only screen and (max-width: 1366px) {
   .info_sec {
@@ -512,15 +528,20 @@ footer {
   .our_allies_logos {
     gap: 2rem;
   }
+  .moon_comp {
+    top: 0.7rem;
+    height: 150px;
+    width: 150px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .moon_comp {
-    height: 225px;
-    width: 225px;
+    height: 140px;
+    width: 140px;
   }
   .glowing-btn {
-    font-size: 45px;
+    font-size: 12px;
   }
   .info_sec,
   .footer_sec,
@@ -539,12 +560,12 @@ footer {
 
 @media only screen and (max-width: 1024px) {
   .moon_comp {
-    height: 210px;
-    width: 210px;
+    height: 130px;
+    width: 130px;
   }
   .glowing-btn {
-    font-size: 23.5px;
-    width: 180px;
+    font-size: 12px;
+    width: auto;
   }
   .banner_sec {
     height: 90vh;
@@ -567,6 +588,9 @@ footer {
     bottom: 90px;
     right: 20px;
   }
+  .banner_sec #breaking_bits_logo {
+    width: 140px;
+  }
   .info_sec,
   .our_allies,
   .footer_sec {
@@ -585,8 +609,9 @@ footer {
 }
 @media only screen and (max-width: 768px) {
   .glowing-btn {
-    font-size: 19.5px;
-    width: 160px;
+    font-size: 8px;
+    width: auto;
+    letter-spacing: 5px;
   }
   .banner_sec #breaking_bits_logo {
     width: 160px;
@@ -596,9 +621,9 @@ footer {
   }
 
   .moon_comp {
-    height: 170px;
-    width: 170px;
-    top: 1.5rem;
+    height: 90px;
+    width: 90px;
+    top: 0.3rem;
   }
   .info_sec {
     gap: 2rem;
@@ -678,9 +703,9 @@ footer {
     margin: -3rem auto 0rem;
   }
   .moon_comp {
-    height: 200px;
-    width: 200px;
-    top: 4.5rem;
+    height: 120px;
+    width: 120px;
+    top: 1.5rem;
     left: 0rem;
   }
   .info_box {
@@ -707,9 +732,9 @@ footer {
     display: block;
   }
   .glowing-btn {
-    font-size: 21px;
+    font-size: 13px;
     font-weight: 400;
-    width: 170px;
+    width: auto;
   }
   .banner_sec #breaking_bits_logo {
     display: none;
@@ -722,5 +747,8 @@ footer {
     bottom: 2rem;
     left: 1rem;
     opacity: 0.7;
+  }
+  .info_sec {
+    margin: -1rem auto 0rem;
   }
 }

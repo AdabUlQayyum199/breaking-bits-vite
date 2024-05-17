@@ -21,9 +21,9 @@ const Infobox = () => {
   const y1 = useTransform(scrollY, [0, 100], [100, 0]);
   const y2 = useTransform(scrollY, [100, 200], [100, 0]);
   const y3 = useTransform(scrollY, [200, 300], [100, 0]);
-  const opacity1 = useTransform(scrollY, [0, 100], [0, 1]);
-  const opacity2 = useTransform(scrollY, [100, 200], [0, 1]);
-  const opacity3 = useTransform(scrollY, [200, 300], [0, 1]);
+  const opacity1 = useTransform(scrollY, [0, 100], [0.5, 1]);
+  const opacity2 = useTransform(scrollY, [100, 200], [0.5, 1]);
+  const opacity3 = useTransform(scrollY, [200, 300], [0.5, 1]);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -47,13 +47,13 @@ const Infobox = () => {
             <h2>
               <AccordionButton>
                 <img src={TheRecipe} alt="The Recipe Icon" />
+                <Box as="span" flex="1" textAlign="left">
+                  The Recipe
+                </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <Box as="span" flex="1" textAlign="left">
-                The Recipe
-              </Box>
               Under the desert moon, I crafted a potent blend of precision &
               scarcity. Here, every element is transformed, scripting the rise
               of an empire unseen!
@@ -79,13 +79,13 @@ const Infobox = () => {
             <h2>
               <AccordionButton>
                 <img src={BlueSkyShop} alt="The Recipe Icon" />
+                <Box as="span" flex="1" textAlign="left">
+                  Blue Sky Shop
+                </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <Box as="span" flex="1" textAlign="left">
-                Blue Sky Shop
-              </Box>
               <p>
                 Scope out some of our badass exclusive merch that'll make your
                 stash even more RAREE, yo!
@@ -113,13 +113,13 @@ const Infobox = () => {
             <h2>
               <AccordionButton>
                 <img src={TheLab} alt="The Recipe Icon" />
+                <Box as="span" flex="1" textAlign="left">
+                  The Lab
+                </Box>
                 <AccordionIcon />
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              <Box as="span" flex="1" textAlign="left">
-                The Lab
-              </Box>
               <p>
                 Where desert secrets catalyze under the moonlight, The Lab
                 distills rare essences into even rarer forms. This is the
