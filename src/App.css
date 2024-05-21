@@ -397,6 +397,7 @@ footer {
 }
 .footer_sec h2 a {
   font-size: 15px;
+  text-decoration: none;
 }
 .footer_sec h2 img {
   width: 40px;
