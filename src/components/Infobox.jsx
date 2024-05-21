@@ -18,9 +18,15 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const Infobox = () => {
   const { scrollY } = useViewportScroll();
+
+  // Define scaling animations for each image
+  const scale1 = useTransform(scrollY, [0, 100], [0.8, 1]);
+  const scale2 = useTransform(scrollY, [100, 200], [0.8, 1]);
+  const scale3 = useTransform(scrollY, [200, 300], [0.8, 1]);
+
   const y1 = useTransform(scrollY, [0, 100], [100, 0]);
-  const y2 = useTransform(scrollY, [100, 200], [100, 0]);
-  const y3 = useTransform(scrollY, [200, 300], [100, 0]);
+  const y2 = useTransform(scrollY, [0, 200], [100, 0]);
+  const y3 = useTransform(scrollY, [0, 300], [100, 0]);
   const opacity1 = useTransform(scrollY, [0, 100], [0.5, 1]);
   const opacity2 = useTransform(scrollY, [100, 200], [0.5, 1]);
   const opacity3 = useTransform(scrollY, [200, 300], [0.5, 1]);
@@ -31,7 +37,11 @@ const Infobox = () => {
       {/* info box 01 */}
       <motion.div className="info_box" style={{ y: y1, opacity: opacity1 }}>
         <div id="info_box01">
-          <img src={TheRecipe} alt="The Recipe Icon" />
+          <motion.img
+            src={TheRecipe}
+            alt="The Recipe Icon"
+            style={{ scale: scale1 }}
+          />
           <div className="info_content">
             <h2>The Recipe</h2>
             <p>
@@ -46,7 +56,11 @@ const Infobox = () => {
           <AccordionItem>
             <h2>
               <AccordionButton>
-                <img src={TheRecipe} alt="The Recipe Icon" />
+                <motion.img
+                  src={TheRecipe}
+                  alt="The Recipe Icon"
+                  style={{ scale: scale1 }}
+                />
                 <Box as="span" flex="1" textAlign="left">
                   The Recipe
                 </Box>
@@ -64,7 +78,11 @@ const Infobox = () => {
       {/* info box 02 */}
       <motion.div className="info_box" style={{ y: y2, opacity: opacity2 }}>
         <div id="info_box02">
-          <img src={BlueSkyShop} alt="The Recipe Icon" />
+          <motion.img
+            src={BlueSkyShop}
+            alt="Blue Sky Shop Icon"
+            style={{ scale: scale2 }}
+          />
           <div className="info_content">
             <h2>Blue Sky Shop</h2>
             <p>
@@ -78,7 +96,11 @@ const Infobox = () => {
           <AccordionItem>
             <h2>
               <AccordionButton>
-                <img src={BlueSkyShop} alt="The Recipe Icon" />
+                <motion.img
+                  src={BlueSkyShop}
+                  alt="Blue Sky Shop Icon"
+                  style={{ scale: scale2 }}
+                />
                 <Box as="span" flex="1" textAlign="left">
                   Blue Sky Shop
                 </Box>
@@ -97,13 +119,17 @@ const Infobox = () => {
       {/* info box 03 */}
       <motion.div className="info_box" style={{ y: y3, opacity: opacity3 }}>
         <div id="info_box03">
-          <img src={TheLab} alt="The Recipe Icon" />
+          <motion.img
+            src={TheLab}
+            alt="The Lab Icon"
+            style={{ scale: scale3 }}
+          />
           <div className="info_content">
             <h2>The Lab</h2>
             <p>
-              Where desert secrets catalyze under the moonlight, The Lab
-              distills rare essences into even rarer forms. This is the alchemy
-              of the digital age!
+              Where desert secrets catalyze under the moonlight, Here distills
+              rare essences into even rarer forms. This is the alchemy of the
+              digital age!
             </p>
           </div>
         </div>
@@ -112,7 +138,11 @@ const Infobox = () => {
           <AccordionItem>
             <h2>
               <AccordionButton>
-                <img src={TheLab} alt="The Recipe Icon" />
+                <motion.img
+                  src={TheLab}
+                  alt="The Lab Icon"
+                  style={{ scale: scale3 }}
+                />
                 <Box as="span" flex="1" textAlign="left">
                   The Lab
                 </Box>
@@ -121,9 +151,9 @@ const Infobox = () => {
             </h2>
             <AccordionPanel pb={4}>
               <p>
-                Where desert secrets catalyze under the moonlight, The Lab
-                distills rare essences into even rarer forms. This is the
-                alchemy of the digital age!
+                Where desert secrets catalyze under the moonlight, Here distills
+                rare essences into even rarer forms. This is the alchemy of the
+                digital age!
               </p>
             </AccordionPanel>
           </AccordionItem>

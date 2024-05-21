@@ -32,7 +32,7 @@ const BannerVideos = () => {
           src={MobileBackgroundVideo}
         ></video>
         <MoonComp />
-        <h2>swipe and unleash</h2>
+        <h2>swipe To unleash</h2>
         {/* background audio */}
         <BackgroundAudio />
       </div>
