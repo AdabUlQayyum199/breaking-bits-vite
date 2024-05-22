@@ -288,7 +288,7 @@ body {
 
 .info_sec {
   width: min(100%, 75%);
-  margin: -13rem auto 4rem;
+  margin: -9rem auto 4rem;
   text-align: center;
   display: flex;
   gap: 3rem;
@@ -299,8 +299,12 @@ body {
   font-optical-sizing: auto;
   cursor: pointer;
 }
-.info_box {
+.info_sec a {
   width: 33%;
+  color: #fff;
+  text-decoration: none;
+}
+.info_box {
   transition: all 0.3s ease-in-out;
 }
 .info_sec .info_box:hover {
@@ -499,6 +503,20 @@ footer {
 }
 /* Accordian CSS End */
 
+@media only screen and (max-width: 2000px) {
+  .info_sec {
+    margin: -10rem auto 4rem;
+  }
+  .moon_comp {
+    height: 215px;
+    width: 215px;
+  }
+  .glowing-btn {
+    width: 190px;
+    font-size: 25px;
+  }
+}
+
 @media only screen and (max-width: 1440px) {
   .moon_comp {
     height: 155px;
@@ -516,7 +534,7 @@ footer {
 @media only screen and (max-width: 1366px) {
   .info_sec {
     gap: 2rem;
-    margin: -15rem auto 2rem;
+    margin: -9.5rem auto 2rem;
   }
   .our_allies h2 {
     margin: 2rem 0;
