@@ -297,9 +297,14 @@ body {
   position: relative;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-.info_sec a {
+
+.info_box01 .info_box {
+  width: 100%;
+}
+.info_box01,
+.info_box {
   width: 33%;
   color: #fff;
   text-decoration: none;
@@ -659,15 +664,19 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .info_box a {
-    width: 100%;
-  }
-  .info_sec a {
+  .info_box01 {
     width: 45%;
   }
-  .info_sec a:last-of-type {
-    width: 60%;
+  .info_box01 .info_box {
+    width: 100%;
   }
+  .info_box {
+    width: 45%;
+  }
+  .info_sec {
+    width: 80%;
+  }
+
   .our_allies h2 {
     font-size: 40px;
   }
@@ -708,13 +717,16 @@ footer {
     font-size: 40px;
     margin-bottom: 1rem;
   }
+  .info_box01 {
+    width: 80%;
+  }
   .info_box {
     width: 100%;
   }
-  .info_sec a {
+  .info_sec {
     width: 100%;
   }
-  .info_sec a:last-of-type {
+  .info_sec:last-of-type {
     width: 100%;
   }
   .mobile_bg {

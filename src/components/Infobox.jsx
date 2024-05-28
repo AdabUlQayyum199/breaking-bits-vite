@@ -6,8 +6,8 @@ import React from "react";
 import TheRecipe from "../assets/images/TheRecipe.png";
 import BlueSkyShop from "../assets/images/BlueSkyShop.png";
 import TheLab from "../assets/images/TheLab.png";
-import { Box, useDisclosure } from "@chakra-ui/react";
 import RecipePDF from "../assets/images/The_Recipe.pdf";
+import { Box, useDisclosure, useMediaQuery } from "@chakra-ui/react";
 import {
   Accordion,
   AccordionItem,
@@ -19,25 +19,36 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 const Infobox = () => {
   const { scrollY } = useViewportScroll();
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   // Define scaling animations for each image
   const scale1 = useTransform(scrollY, [0, 100], [0.8, 1]);
   const scale2 = useTransform(scrollY, [100, 200], [0.8, 1]);
   const scale3 = useTransform(scrollY, [200, 300], [0.8, 1]);
 
-  const y1 = useTransform(scrollY, [0, 0], [0, 0]);
-  const y2 = useTransform(scrollY, [0, 0], [0, 0]);
-  const y3 = useTransform(scrollY, [0, 0], [0, 0]);
-  const opacity1 = useTransform(scrollY, [0, 100], [1, 1]);
-  const opacity2 = useTransform(scrollY, [100, 200], [1, 1]);
-  const opacity3 = useTransform(scrollY, [200, 300], [1, 1]);
+  // Define animations for mobile devices
+  const y1 = useTransform(scrollY, [0, 200], [100, 0]);
+  const y2 = useTransform(scrollY, [0, 400], [200, 0]);
+  const y3 = useTransform(scrollY, [0, 600], [300, 0]);
+  const opacity1 = useTransform(scrollY, [0, 200], [0.5, 1]);
+  const opacity2 = useTransform(scrollY, [400, 400], [0.5, 1]);
+  const opacity3 = useTransform(scrollY, [600, 600], [0.5, 1]);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div className="info_sec">
       {/* info box 01 */}
-      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
-        <motion.div className="info_box" style={{ y: y1, opacity: opacity1 }}>
+      <a
+        href={RecipePDF}
+        target="_blank"
+        className="info_box01"
+        rel="noopener noreferrer"
+      >
+        <motion.div
+          className="info_box"
+          style={isMobile ? { y: y1, opacity: opacity1 } : {}}
+        >
           <div id="info_box01">
             <motion.img
               src={TheRecipe}
@@ -79,93 +90,95 @@ const Infobox = () => {
         </motion.div>
       </a>
       {/* info box 02 */}
-      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
-        <motion.div className="info_box" style={{ y: y2, opacity: opacity2 }}>
-          <div id="info_box02">
-            <motion.img
-              src={BlueSkyShop}
-              alt="Blue Sky Shop Icon"
-              style={{ scale: scale2 }}
-            />
-            <div className="info_content">
-              <h2>Blue Sky Shop</h2>
+      <motion.div
+        className="info_box"
+        style={isMobile ? { y: y2, opacity: opacity2 } : {}}
+      >
+        <div id="info_box02">
+          <motion.img
+            src={BlueSkyShop}
+            alt="Blue Sky Shop Icon"
+            style={{ scale: scale2 }}
+          />
+          <div className="info_content">
+            <h2>Blue Sky Shop</h2>
+            <p>
+              Scope out some of our badass exclusive merch that'll make your
+              stash even more RAREE, yo!
+            </p>
+          </div>
+        </div>
+        {/* accordion for mobile version */}
+        <Accordion allowMultiple>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <motion.img
+                  src={BlueSkyShop}
+                  alt="Blue Sky Shop Icon"
+                  style={{ scale: scale2 }}
+                />
+                <Box as="span" flex="1" textAlign="left">
+                  Blue Sky Shop
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
               <p>
                 Scope out some of our badass exclusive merch that'll make your
                 stash even more RAREE, yo!
               </p>
-            </div>
-          </div>
-          {/* accordion for mobile version */}
-          <Accordion allowMultiple>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <motion.img
-                    src={BlueSkyShop}
-                    alt="Blue Sky Shop Icon"
-                    style={{ scale: scale2 }}
-                  />
-                  <Box as="span" flex="1" textAlign="left">
-                    Blue Sky Shop
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                <p>
-                  Scope out some of our badass exclusive merch that'll make your
-                  stash even more RAREE, yo!
-                </p>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-        </motion.div>
-      </a>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </motion.div>
       {/* info box 03 */}
-      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
-        <motion.div className="info_box" style={{ y: y3, opacity: opacity3 }}>
-          <div id="info_box03">
-            <motion.img
-              src={TheLab}
-              alt="The Lab Icon"
-              style={{ scale: scale3 }}
-            />
-            <div className="info_content">
-              <h2>The Lab</h2>
+      <motion.div
+        className="info_box"
+        style={isMobile ? { y: y3, opacity: opacity3 } : {}}
+      >
+        <div id="info_box03">
+          <motion.img
+            src={TheLab}
+            alt="The Lab Icon"
+            style={{ scale: scale3 }}
+          />
+          <div className="info_content">
+            <h2>The Lab</h2>
+            <p>
+              Where desert secrets catalyze under the moonlight, Here distills
+              rare essences into even rarer forms. This is the alchemy of the
+              digital age!
+            </p>
+          </div>
+        </div>
+        {/* accordion for mobile version */}
+        <Accordion allowMultiple>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <motion.img
+                  src={TheLab}
+                  alt="The Lab Icon"
+                  style={{ scale: scale3 }}
+                />
+                <Box as="span" flex="1" textAlign="left">
+                  The Lab
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
               <p>
                 Where desert secrets catalyze under the moonlight, Here distills
                 rare essences into even rarer forms. This is the alchemy of the
                 digital age!
               </p>
-            </div>
-          </div>
-          {/* accordion for mobile version */}
-          <Accordion allowMultiple>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <motion.img
-                    src={TheLab}
-                    alt="The Lab Icon"
-                    style={{ scale: scale3 }}
-                  />
-                  <Box as="span" flex="1" textAlign="left">
-                    The Lab
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                <p>
-                  Where desert secrets catalyze under the moonlight, Here
-                  distills rare essences into even rarer forms. This is the
-                  alchemy of the digital age!
-                </p>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-        </motion.div>
-      </a>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </motion.div>
     </div>
   );
 };
