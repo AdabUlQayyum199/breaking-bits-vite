@@ -659,8 +659,14 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .info_box {
-    width: 44%;
+  .info_box a {
+    width: 100%;
+  }
+  .info_sec a {
+    width: 45%;
+  }
+  .info_sec a:last-of-type {
+    width: 60%;
   }
   .our_allies h2 {
     font-size: 40px;
@@ -703,10 +709,13 @@ footer {
     margin-bottom: 1rem;
   }
   .info_box {
-    width: 45%;
+    width: 100%;
   }
-  .info_box:last-of-type {
-    width: 80%;
+  .info_sec a {
+    width: 100%;
+  }
+  .info_sec a:last-of-type {
+    width: 100%;
   }
   .mobile_bg {
     display: block !important;
@@ -729,6 +738,7 @@ footer {
   }
   .info_box {
     width: 80%;
+    margin: 0 auto;
   }
   .footer_sec {
     flex-direction: column-reverse;
