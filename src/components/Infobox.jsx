@@ -7,6 +7,7 @@ import TheRecipe from "../assets/images/TheRecipe.png";
 import BlueSkyShop from "../assets/images/BlueSkyShop.png";
 import TheLab from "../assets/images/TheLab.png";
 import { Box, useDisclosure } from "@chakra-ui/react";
+import RecipePDF from "../assets/images/The_Recipe.pdf";
 import {
   Accordion,
   AccordionItem,
@@ -35,7 +36,7 @@ const Infobox = () => {
   return (
     <div className="info_sec">
       {/* info box 01 */}
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
         <motion.div className="info_box" style={{ y: y1, opacity: opacity1 }}>
           <div id="info_box01">
             <motion.img
@@ -78,7 +79,7 @@ const Infobox = () => {
         </motion.div>
       </a>
       {/* info box 02 */}
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
         <motion.div className="info_box" style={{ y: y2, opacity: opacity2 }}>
           <div id="info_box02">
             <motion.img
@@ -121,7 +122,7 @@ const Infobox = () => {
         </motion.div>
       </a>
       {/* info box 03 */}
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href={RecipePDF} target="_blank" rel="noopener noreferrer">
         <motion.div className="info_box" style={{ y: y3, opacity: opacity3 }}>
           <div id="info_box03">
             <motion.img
