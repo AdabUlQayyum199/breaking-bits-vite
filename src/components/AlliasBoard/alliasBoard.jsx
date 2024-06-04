@@ -30,7 +30,7 @@ const alliasBoard = () => {
           <a
             className="clown_sec"
             target="_blank"
-            href="https://www.clownicp.org/"
+            href="https://x.com/realclownicp"
           >
             <img src={Clown} alt="Clown image" />
           </a>

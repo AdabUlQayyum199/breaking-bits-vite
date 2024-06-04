@@ -14,7 +14,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useScrollDirection from "../custonhooks/useScrollDirection ";
 
 const logos = [
-  { src: Clownlogo, alt: "Clown Logo", href: "https://www.clownicp.org/" },
+  { src: Clownlogo, alt: "Clown Logo", href: "https://x.com/realclownicp" },
   { src: ICPswap, alt: "ICPSwap Logo", href: "https://info.icpswap.com/" },
   { src: OpenChat, alt: "OpenChat Logo", href: "https://t.co/RrgdK18gus" },
   { src: Windog98, alt: "Windog98 Logo", href: "https://windoge98.com/" },
