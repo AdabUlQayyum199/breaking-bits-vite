@@ -5,6 +5,7 @@ import ClockAudio from "../assets/Audio/tik.mp3";
 import Twittercon from "../assets/images/twitter.svg";
 import TelegramIcon from "../assets/images/Telegram.svg";
 import DiscordIcon from "../assets/images/discord.svg";
+import OClogo from "../assets/images/OpenChat.svg";
 import WebsiteLogo from "../assets/images/WebsiteLogo.png";
 import DesktopBackgroundVideo from "../assets/Videos/Pre-Launch_Desktop_Animated_.mov";
 import MobileBackgroundVideo from "../assets/Videos/Pre-Launch_Mobile_Animated_.mov";
@@ -100,6 +101,13 @@ const ComingSoon = () => {
             rel="noopener noreferrer"
           >
             <img src={DiscordIcon} alt="Discord Icon" />
+          </a>
+          <a
+            href="https://oc.app/group/qsqss-biaaa-aaaar-bf5wq-cai/?ref=yigko-7iaaa-aaaaf-a2mhq-cai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={OClogo} alt="Discord Icon" />
           </a>
         </div>
       </header>

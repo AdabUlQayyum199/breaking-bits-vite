@@ -9,6 +9,7 @@ import FooterBackgroundVideo from "../assets/Videos/Footer_background_video.mp4"
 import TwitterLogo from "../assets/images/twitter.svg";
 import TelegramLogo from "../assets/images/Telegram.svg";
 import DiscordLogo from "../assets/images/discord.svg";
+import OClogo from "../assets/images/OpenChat.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import useScrollDirection from "../custonhooks/useScrollDirection ";
 
@@ -121,6 +122,13 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <img src={DiscordLogo} alt="Discord Logo" />
+                  </a>
+                  <a
+                    href="https://oc.app/group/qsqss-biaaa-aaaar-bf5wq-cai/?ref=yigko-7iaaa-aaaaf-a2mhq-cai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={OClogo} alt="Discord Logo" />
                   </a>
                 </motion.div>
               </>

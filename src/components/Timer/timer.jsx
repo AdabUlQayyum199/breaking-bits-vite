@@ -9,7 +9,7 @@ const timer = () => {
 
   useEffect(() => {
     const setTargetDeadline = () => {
-      const deadline = new Date("2024-05-16T12:00:00"); // May 10th at 12:00 PM
+      const deadline = new Date("2024-06-04T11:14:00"); // May 10th at 12:00 PM
       localStorage.setItem("endingTime", deadline.getTime().toString());
 
       const birdsAudioElement = document.getElementById("birdsAudio");
